@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-node-targeting
+spec:
+  containers:
+  - name: hello-world-node-targeting
+    image: alpine
+    command: ['sh', '-c', 'echo Hello World! && sleep 600']
+  nodeSelector:
+    test: twright
